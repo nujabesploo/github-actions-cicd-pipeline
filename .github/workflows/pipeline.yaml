@@ -1,4 +1,4 @@
-name: Enterprise Pipeline
+name: Enterprise CI/CD Pipeline
 
 on:
   push:
@@ -6,18 +6,15 @@ on:
       - main
 
 jobs:
-
-  build:
-
+  validate:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Build Validation
-        run: echo "Build successful"
+      - name: Validate Application
+        run: echo "Application validation successful"
 
-      - name: Deployment Validation
-        run: echo "Deployment successful"
+      - name: Deployment Simulation
+        run: echo "Deployment simulation completed"
